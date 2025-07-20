@@ -113,11 +113,11 @@ export function Projects() {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-full">
             Voir tous nos projets
           </Button>
-        </div>
+        </div> */}
       </div>
     </section>
   )

@@ -4,33 +4,38 @@ import { CheckCircle, FileText, Wrench, TestTube, Headphones } from "lucide-reac
 const steps = [
   {
     number: "01",
+    color: "from-orange-500 to-orange-600",
     icon: FileText,
-    title: "ANALYSE",
-    description: "Étude approfondie de vos besoins et contraintes techniques pour définir la solution optimale.",
+    title: "Synergie",
+    description: "nous voulons partager avec nos clients des collaborations efficaces, dans un esprit gagnant/gagnant, qui profitera à chacun, et au maintien de l’emploi sur notre commune",
   },
   {
     number: "02",
+    color: "from-blue-500 to-blue-600",
     icon: CheckCircle,
-    title: "CONCEPTION",
-    description: "Élaboration des plans et spécifications techniques détaillées selon les normes en vigueur.",
+    title: "Continuité",
+    description: "Nouveaux Projets, Nouvelles Ambitions, mais Savoir-Faire Conservés.",
   },
   {
     number: "03",
+    color: "from-red-500 to-red-600",
     icon: Wrench,
-    title: "INSTALLATION",
-    description: "Mise en œuvre par nos équipes certifiées avec respect des délais et de la qualité.",
+    title: "Partenariat",
+    description: "Au service des industries, des Cliniques, des Hôtels, des Centre Commerciaux, des Collectivités… Five Systems est, le partenaire incontournable de vos projets",
   },
   {
     number: "04",
+    color: "from-green-500 to-green-600",
     icon: TestTube,
-    title: "CONTRÔLE",
-    description: "Tests et vérifications complètes pour garantir le bon fonctionnement des installations.",
+    title: "Fiabilité",
+    description: "Pour conquérir ses clients, Five Systems veut être reconnue comme un acteur fiable et sécurisant sur son métier.",
   },
   {
     number: "05",
+    color: "from-yellow-500 to-yellow-600",
     icon: Headphones,
-    title: "MAINTENANCE",
-    description: "Suivi et maintenance préventive pour assurer la pérennité de vos équipements.",
+    title: "Conformité",
+    description: "Améliorer la qualité et la sureté de nos réalisations dans le strict respect des normes et des législations.",
   },
 ]
 
@@ -55,7 +60,7 @@ export function Methodology() {
               <CardContent className="p-6 text-center">
                 {/* Step Number */}
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                  <div className={`w-12 h-12 bg-gradient-to-br ${step.color} rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg`}>
                     {step.number}
                   </div>
                 </div>

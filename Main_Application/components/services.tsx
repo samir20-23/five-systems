@@ -1,42 +1,47 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Shield, Flame, Wind, Camera, Wrench, Settings } from "lucide-react"
+import { Shield, Flame, Wind, Camera, Wrench, Settings, Zap, Droplet, Building } from "lucide-react"
 
 const services = [
   {
-    icon: Shield,
-    title: "SÉCURITÉ CIVILE",
+    icon: Zap,
+    title: "Electricité CFO/CFA",
     description:
-      "Systèmes de vidéosurveillance, contrôle d'accès, alarmes anti-intrusion et solutions de sécurité périmétrique pour la protection optimale de vos installations.",
-    features: ["Vidéosurveillance HD", "Contrôle d'accès", "Alarmes anti-intrusion", "Sécurité périmétrique"],
-  },
-  {
-    icon: Flame,
-    title: "SÉCURITÉ INCENDIE",
-    description:
-      "Installation et maintenance de systèmes de détection incendie, extincteurs automatiques, désenfumage et signalisation d'évacuation conformes aux normes.",
-    features: ["Détection incendie", "Extincteurs automatiques", "Désenfumage", "Signalisation d'évacuation"],
+      "Nous réalisons des installations électriques fiables pour l’alimentation, l’éclairage et les systèmes de communication. Nos solutions allient performance, sécurité et conformité aux normes.",
+    features: ["Alimentation électrique", "Éclairage intérieur/extérieur", "Réseaux courants faibles", "Mise en conformité électrique"],
+    image: "/hover4.png",
   },
   {
     icon: Wind,
-    title: "CHAUFFAGE VENTILATION",
+    title: "Climatisation, Ventilation & Traitement d'air",
     description:
-      "Solutions complètes de chauffage, ventilation et climatisation pour assurer un confort thermique optimal et une qualité d'air irréprochable.",
-    features: ["Chauffage central", "Ventilation mécanique", "Climatisation", "Traitement de l'air"],
+      "Nous proposons des systèmes de climatisation, ventilation et de traitement d’air pour garantir une qualité d’air saine et durable. Nos solutions assurent confort, hygiène et respect des normes.",
+    features: ["Ventilation mécanique", "Climatisation centralisée", "Traitement de l'air", "Qualité de l'air intérieur"],
+    image: "/hover2.png",
   },
   {
-    icon: Camera,
-    title: "SURVEILLANCE AVANCÉE",
+    icon: Droplet,
+    title: "Plomberie sanitaire",
     description:
-      "Technologies de pointe pour la surveillance et le monitoring en temps réel de vos installations avec des systèmes intelligents et connectés.",
-    features: ["Monitoring 24/7", "Alertes intelligentes", "Analyse vidéo", "Reporting automatique"],
+      "Nous concevons et installons des réseaux de plomberie fiables et adaptés, pour l’eau potable et les eaux usées. Nos prestations allient qualité, durabilité et optimisation des consommations.",
+    features: ["Distribution eau potable", "Evacuation eaux usées", "Réseaux sanitaires", "Chauffe-eau / Ballons thermodynamiques"],
+    image: "/hover1.png",
   },
   {
-    icon: Wrench,
-    title: "MAINTENANCE PRÉVENTIVE",
+    icon: Flame,
+    title: "Sécurité incendie",
     description:
-      "Services de maintenance préventive et curative pour garantir le bon fonctionnement et la longévité de vos installations techniques.",
-    features: ["Maintenance préventive", "Dépannage d'urgence", "Mise à jour système", "Support technique"],
+      "Nous mettons en place des systèmes de sécurité incendie complets pour protéger vos espaces. Détection, Désenfumage, alarmes et équipements sont conçus pour une réactivité maximale en cas d’urgence.",
+    features: ["Détection incendie", "Désenfumage", "Extincteurs automatiques", "Signalisation d'évacuation"],
+    image: "/hover5.png",
+  },
+  {
+    icon: Building,
+    title: "Charpente métallique",
+    description:
+      "Travaux de Charpente Métallique Clé en Main : Conception, Fabrication et Installation",
+    features: ["Études et plans", "Fabrication en atelier", "Montage sur site", "Maintenance structurelle"],
+    image: "/hover3.png",
   },
   {
     icon: Settings,
@@ -44,6 +49,7 @@ const services = [
     description:
       "Solutions d'automatisation et de domotique pour optimiser la gestion de vos installations et réduire les coûts opérationnels.",
     features: ["Domotique avancée", "Gestion centralisée", "Optimisation énergétique", "Interface intuitive"],
+    image: "/hover6.png",
   },
 ]
 
@@ -58,38 +64,51 @@ export function Services() {
             maintenance, nous vous accompagnons à chaque étape.
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <Card
               key={index}
-              className="group hover:shadow-2xl transition-all duration-300 border-none bg-white hover:-translate-y-2"
+              className="group hover:shadow-2xl transition-all duration-300 border-none bg-white hover:-translate-y-2 relative overflow-hidden"
             >
-              <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  <service.icon className="w-8 h-8 text-white" />
-                </div>
-                <CardTitle className="text-xl font-bold text-slate-900">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-slate-600 leading-relaxed">{service.description}</p>
+              {/* Background Image */}
+              <div
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out"
+                style={{
+                  backgroundImage: `url(${service.image})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
 
-                <div className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                      <span className="text-sm text-slate-700">{feature}</span>
-                    </div>
-                  ))}
-                </div>
+              {/* Overlay for text readability */}
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out" />
 
-                <Button
-                  variant="outline"
-                  className="w-full mt-6 border-orange-500 text-orange-600 hover:bg-orange-500 hover:text-white transition-colors bg-transparent"
-                >
-                  En savoir plus
-                </Button>
-              </CardContent>
+              {/* Content */}
+              <div className="relative z-10">
+                <CardHeader className="text-center pb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <CardTitle className="text-xl font-bold text-slate-900 group-hover:text-white transition-colors duration-300">
+                    {service.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p className="text-slate-600 leading-relaxed group-hover:text-white transition-colors duration-300">
+                    {service.description}
+                  </p>
+                  <div className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-orange-500 rounded-full group-hover:bg-orange-300 transition-colors duration-300"></div>
+                        <span className="text-sm text-slate-700 group-hover:text-white transition-colors duration-300">
+                          {feature}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </div>
             </Card>
           ))}
         </div>

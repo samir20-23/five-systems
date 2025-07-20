@@ -5,31 +5,12 @@ import Image from "next/image"
 
 const teamMembers = [
   {
-    name: "DAVID GARCIA",
-    role: "Directeur Général",
+    name: "RIADI ZAKARIA",
+    role: "General Manager",
     image: "/placeholder.svg?height=300&width=300",
-    description: "Expert en installations techniques avec plus de 20 ans d'expérience dans le secteur.",
-    email: "david.garcia@fivesystems.fr",
-    phone: "+33 1 23 45 67 89",
-    linkedin: "#",
-  },
-  {
-    name: "MARIE DUBOIS",
-    role: "Responsable Technique",
-    image: "/placeholder.svg?height=300&width=300",
-    description: "Spécialisée en sécurité incendie et systèmes de ventilation, certifiée par les organismes officiels.",
-    email: "marie.dubois@fivesystems.fr",
-    phone: "+33 1 23 45 67 90",
-    linkedin: "#",
-  },
-  {
-    name: "PIERRE MARTIN",
-    role: "Chef de Projet",
-    image: "/placeholder.svg?height=300&width=300",
-    description: "Coordination et gestion de projets complexes d'installations techniques multi-sites.",
-    email: "pierre.martin@fivesystems.fr",
-    phone: "+33 1 23 45 67 91",
-    linkedin: "#",
+    description: "State engineer with 10+ years of experience...",
+    email: "random.email@gmail.com",
+    phone: "+212 6 35 59 78 45",
   },
 ]
 
@@ -40,12 +21,11 @@ export function Team() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-slate-900 mb-6">NOTRE ÉQUIPE</h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Une équipe d'experts passionnés et qualifiés, dédiée à la réussite de vos projets d'installations techniques
-            les plus exigeants.
+            Notre équipe est composée de professionnels passionnés et experts, chacun apportant une contribution unique. Ensemble, nous partageons une vision commune : offrir un service exceptionnel et dépasser les attentes de nos clients. Dans un environnement de travail collaboratif et innovant, nous encourageons la créativité et l’engagement. Découvrez les visages et les talents qui font de notre équipe un pilier de notre succès !
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex justify-center">
           {teamMembers.map((member, index) => (
             <Card
               key={index}
@@ -84,12 +64,6 @@ export function Team() {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <Button size="lg" className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-3 rounded-full">
-            Rejoindre notre équipe
-          </Button>
         </div>
       </div>
     </section>

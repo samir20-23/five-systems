@@ -1,0 +1,4 @@
+agent:
+  authtoken: 30A7d3UoB1yXuLT618UBF8vqoyp_3KPGMGrqof2pbw1DVHnwJ
+  # to run the onine server, you need to run this in terminal : "ngrok start --config ngrok.yml --all" and "ngrok http 3000"
+  # the sit like this https://2f3bf2b3ea7f.ngrok-free.app/

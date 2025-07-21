@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { ChevronDown } from "lucide-react" 
+import { ChevronDown } from "lucide-react"
 
 const slides = [
   {
@@ -38,16 +38,27 @@ export function Hero() {
   }, [])
 
   return (
-    
+
     <section className="relative h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center overflow-hidden">
- 
+
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('/placeholder.svg?height=100&width=100')] opacity-5"></div>
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <video
+          className="w-full h-full object-cover opacity-10"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/animation2.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
+      <div className="relative z-10 text-left text-white max-w-4xl ml-auto mr-auto lg:mr-auto lg:ml-0 px-6 lg:pl-72">
         <div className="mb-8">
-          <h1 className="text-6xl md:text-8xl font-bold mb-4 tracking-tight">{slides[currentSlide].title}</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight"> {slides[currentSlide].title} </h1>
           <h2 className="text-2xl md:text-3xl font-light mb-6 text-slate-300">{slides[currentSlide].subtitle}</h2>
           <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
             {slides[currentSlide].description}
@@ -56,7 +67,7 @@ export function Hero() {
 
         <Button
           size="lg"
-          className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105"
+          className="bg-transparent border border-white text-white hover:bg-white hover:text-[rgb(52,62,78)] px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105"
         >
           Découvrir nos services
         </Button>
@@ -67,9 +78,8 @@ export function Hero() {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide ? "bg-orange-600 scale-125" : "bg-slate-600 hover:bg-slate-500"
-              }`}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide ? "bg-orange-600 scale-125" : "bg-slate-600 hover:bg-slate-500"
+                }`}
             />
           ))}
         </div>

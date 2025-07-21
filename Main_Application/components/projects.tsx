@@ -1,6 +1,8 @@
+"use client"
+import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, Calendar, MapPin } from "lucide-react"
+import { ExternalLink, Calendar, MapPin, X } from "lucide-react"
 import Image from "next/image"
 
 const projects = [
@@ -55,8 +57,29 @@ const projects = [
 ]
 
 export function Projects() {
+  const [expandedImage, setExpandedImage] = useState<string | null>(null)
+
   return (
     <section className="py-20 bg-white">
+      {/* Image Modal */}
+      {expandedImage && (
+        <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center">
+          <button
+            onClick={() => setExpandedImage(null)}
+            className="absolute top-6 right-6 text-white hover:text-gray-300"
+          >
+            <X className="w-8 h-8" />
+          </button>
+          <Image
+            src={expandedImage}
+            alt="Expanded"
+            width={1000}
+            height={700}
+            className="max-w-full max-h-full rounded-lg shadow-2xl"
+          />
+        </div>
+      )}
+
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-slate-900 mb-6">PROJETS RÉCENTS</h2>
@@ -88,6 +111,7 @@ export function Projects() {
                 </div>
                 <Button
                   size="sm"
+                  onClick={() => setExpandedImage(project.image)}
                   className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white text-slate-900 hover:bg-slate-100"
                 >
                   <ExternalLink className="w-4 h-4" />
@@ -112,12 +136,6 @@ export function Projects() {
             </Card>
           ))}
         </div>
-
-        {/* <div className="text-center mt-12">
-          <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-full">
-            Voir tous nos projets
-          </Button>
-        </div> */}
       </div>
     </section>
   )

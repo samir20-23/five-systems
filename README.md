@@ -2,16 +2,10 @@
   <h1>
     <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=40&duration=4000&pause=20&color=ff4d00&center=true&vCenter=true&width=482&lines=Five+Systems+App" alt="Five systems" />
   </h1>
-
-<video 
-  autoplay 
-  muted 
-  loop 
-  width="600" 
-  src="Main_Application/public/animation2.mp4" 
-  title="Five Systems Preview"
-  style="border-radius: 20px;"
-/>
+ 
+<p align="center" title="Five Systems Preview">
+  <img src="Main_Application/public/animation2.gif" style="border-radius: 70px;" width="600" />
+</p>
 
 </div>
 

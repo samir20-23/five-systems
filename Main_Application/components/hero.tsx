@@ -66,12 +66,12 @@ export function Hero() {
           color: "#0000008c",
         }}
       />
-      <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
+      <div className="relative z-10 text-left text-white max-w-4xl ml-auto mr-auto lg:mr-auto lg:ml-0 px-6 lg:pl-72">
         <div
           className="mb-8"
           style={{ textShadow: "0 1px 3px rgba(0, 0, 0, 0.3)" }}
         >
-          <h1 className="text-6xl md:text-8xl font-bold mb-4 tracking-tight">
+          <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-tight">
             {slides[currentSlide].title}
           </h1>
           <h2 className="text-2xl md:text-3xl font-light mb-6 text-slate-300">

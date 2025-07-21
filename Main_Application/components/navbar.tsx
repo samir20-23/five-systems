@@ -4,32 +4,20 @@ import { Button } from "@/components/ui/button";
 export default function Navbar() {
   return (
     <header
-      className="sticky top-0 z-50  bg-white/94 backdrop-blur-md  transition-all"
+      className="sticky top-0 z-50  bg-white backdrop-blur-md  transition-all"
       style={{ boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)" }}
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-2">
+      <div className="mx-auto px-24 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Image
-              src="/logo1Png.png"
+              src="/logo1.png"
               alt="Logo"
-              width={40}
-              height={40}
+              width={150}
+              height={150}
               className="rounded-md"
               priority
             />
-            <span
-              className="text-2xl font-bold tracking-tight transition-colors duration-300 hover:opacity-90 cursor-pointer"
-              style={{ color: "#ff4d00d2" }}
-            >
-              <span
-                className="text-gray-800"
-                style={{ textShadow: "-1px 1px 4px rgb(255 242 242 / 10%)" }}
-              >
-                Five
-              </span>{" "}
-              System
-            </span>
           </div>
 
           <nav className="hidden md:flex items-center space-x-6">

@@ -99,13 +99,13 @@ export function Contact() {
             </div>
 
             {/* Emergency Contact */}
-            <Card className="bg-red-600 border-none">
+            {/* <Card className="bg-red-600 border-none">
               <CardContent className="p-6">
                 <h4 className="font-bold text-white mb-2">Urgence 24h/7j</h4>
                 <p className="text-red-100 mb-3">Pour toute urgence technique</p>
                 <Button className="bg-white text-red-600 hover:bg-red-50">Appeler maintenant</Button>
               </CardContent>
-            </Card>
+            </Card> */}
           </div>
 
           {/* Contact Form */}

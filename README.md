@@ -35,10 +35,6 @@ npm run dev
 
   <img src="https://skillicons.dev/icons?i=js,html,css,react,nextjs,tailwind,github,npm,git,md" />
 
-<br><br> <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=17&duration=4000&pause=1000&color=ff4d00&center=true&vCenter=true&width=482&lines=If+you+fail+get+up+and+try+again" alt="Motivation" />
-
-</div>
-
 ---
 
 <div align="center">

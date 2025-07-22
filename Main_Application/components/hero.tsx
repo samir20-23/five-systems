@@ -66,7 +66,7 @@ export function Hero() {
           color: "#0000008c",
         }}
       />
-        <div id="headercontent" className="relative z-10 text-left text-white max-w-4xl ml-auto mr-auto lg:mr-auto lg:ml-0 p  x-6 lg:pl-72">
+        <div id="headercontent" className="">
       {/* <div id="headercontent" className="relative z-10 text-left text-white max-w-4xl px-6 lg:px-8 lg:pl-72 mx-auto"> */}
         <div
           className="mb-8"

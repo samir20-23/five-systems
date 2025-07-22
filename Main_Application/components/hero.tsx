@@ -66,18 +66,27 @@ export function Hero() {
           color: "#0000008c",
         }}
       />
-      <div className="relative z-10 text-left text-white max-w-4xl ml-auto mr-auto lg:mr-auto lg:ml-0 px-6 lg:pl-72">
+        <div id="headercontent" className="relative z-10 text-left text-white max-w-4xl ml-auto mr-auto lg:mr-auto lg:ml-0 p  x-6 lg:pl-72">
+      {/* <div id="headercontent" className="relative z-10 text-left text-white max-w-4xl px-6 lg:px-8 lg:pl-72 mx-auto"> */}
         <div
           className="mb-8"
           style={{ textShadow: "0 1px 3px rgba(0, 0, 0, 0.3)" }}
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-tight">
-            {slides[currentSlide].title}
-          </h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-tight"></h1>
+          {/* <h1 id="titleheader" className="text-5xl md:text-6xl font-bold mb-4 tracking-tight">
+              {slides[currentSlide].title} */}
+          {/* title  */}
+          <p id="titleheader">
+            <span className="text-5xl md:text-6xl font-bold mb-4 tracking-tight">
+              {slides[currentSlide].title}
+            </span>
+          </p>
+          {/* title  */}
+
           <h2 className="text-2xl md:text-3xl font-light mb-6 text-slate-300">
             {slides[currentSlide].subtitle}
           </h2>
-          <p className="text-lg md:text-xl text-white max-w-2xl mx-auto leading-relaxed">
+          <p id="headerDescription" className="text-lg md:text-xl text-white max-w-2xl mx-auto leading-relaxed">
             {slides[currentSlide].description}
           </p>
         </div>
@@ -87,7 +96,8 @@ export function Hero() {
         >
           Découvrir nos services
         </Button>
-        <div className="flex justify-center space-x-3 mt-12">
+      
+      </div>  <div id="headerswitch" className="flex justify-center space-x-3 mt-12">
           {slides.map((_, index) => (
             <button
               key={index}
@@ -100,8 +110,7 @@ export function Hero() {
             />
           ))}
         </div>
-      </div>
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div id="headerIconDown" className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <ChevronDown className="w-8 h-8 text-white opacity-60" />
       </div>
     </section>

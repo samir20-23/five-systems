@@ -97,7 +97,7 @@ export function Services() {
                   <p className="text-slate-600 leading-relaxed group-hover:text-white transition-colors duration-300">
                     {service.description}
                   </p>
-                  <div className="space-y-2">
+                  {/* <div className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center space-x-2">
                         <div className="w-2 h-2 bg-orange-500 rounded-full group-hover:bg-orange-300 transition-colors duration-300"></div>
@@ -106,7 +106,7 @@ export function Services() {
                         </span>
                       </div>
                     ))}
-                  </div>
+                  </div> */}
                 </CardContent>
               </div>
             </Card>

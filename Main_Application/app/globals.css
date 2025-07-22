@@ -48,6 +48,7 @@ body {
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -88,7 +89,95 @@ body {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+
+/* title */
+#headercontent {
+  min-width: 800px;
+  max-width: 800px;
+  padding-left: 6rem;
+}
+
+#headerDescription {
+  padding: 0;
+  margin: 0;
+}
+
+#headerswitch {
+  position: absolute;
+  width: 100%; 
+  align-items: center;
+  top: 76%; 
+}
+#headerIconDown {
+  left:48.7%
+}
+#titleheader {
+
+  span {
+
+    font: 700 4em/1 "Oswald", sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    text-shadow: 0 0 80px rgba(255, 255, 255, .5);
+
+    /* Clip Background Image */
+
+    background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* Animate Background Image */
+
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: aitf 80s linear infinite;
+
+    /* Activate hardware acceleration for smoother animations */
+
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+
+  }
+}
+
+/* Animate Background Image */
+
+@-webkit-keyframes aitf {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+
+@media (max-width: 770px) {
+
+
+  #titleheader {
+
+    span {
+
+      font: 700 4em/1 "Oswald", sans-serif;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
+    }
+  }
+
+  #headercontent {
+    min-width: 100%;
+    max-width: 100%;
+
   }
 }

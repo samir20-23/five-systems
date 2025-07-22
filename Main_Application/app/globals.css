@@ -98,9 +98,17 @@ body {
 
 /* title */
 #headercontent {
-  min-width: 800px;
-  max-width: 800px;
-  padding-left: 6rem;
+  min-width: 100%;
+  max-width: 100%;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 0 0 121px;
+  height: 52vh;
 }
 
 #headerDescription {
@@ -110,13 +118,15 @@ body {
 
 #headerswitch {
   position: absolute;
-  width: 100%; 
+  width: 100%;
   align-items: center;
-  top: 76%; 
+  top: 76%;
 }
+
 #headerIconDown {
-  left:48.7%
+  left: 48.7%
 }
+
 #titleheader {
 
   span {
@@ -175,9 +185,14 @@ body {
     }
   }
 
-  #headercontent {
-    min-width: 100%;
-    max-width: 100%;
-
+  #headercontent {  
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    text-align: center;
+    height: 100%;
   }
+
 }

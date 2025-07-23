@@ -1,4 +1,5 @@
 "use client"
+
 import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -61,7 +62,7 @@ export function Projects() {
 
   return (
     <section className="py-20 bg-white">
-      {/* Image Modal */}
+      {/*Expanded Image Modal */}
       {expandedImage && (
         <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center">
           <button

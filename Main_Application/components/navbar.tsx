@@ -14,7 +14,7 @@ export default function Navbar() {
       className="sticky top-0 z-50  bg-white/94 backdrop-blur-md  transition-all"
       style={{ boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)" }}
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-1.5">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-1.5" style={{ backgroundImage : "linear-gradient(45deg, #ffffffa6, #1e1c2733)" }}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Image
@@ -36,7 +36,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-6" style={{textShadow: "0 1px 3px rgba(255, 255, 255, 0.39)"  }}>
             {[
               { href: "#services", label: "Services" },
               { href: "#projects", label: "Projets" },

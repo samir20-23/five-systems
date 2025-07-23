@@ -49,25 +49,18 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden   from-slate-900 via-slate-800 to-slate-900">
+    <section className="relative h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center overflow-hidden">
       <video
+        style={{ opacity: "0.2" }}
         ref={videoRef}
         autoPlay
         muted
         loop
-        className="absolute inset-0 w-full h-full object-cover filter blur-sm"
+        className="absolute inset-0 w-full h-full object-cover filter blur-sm w-full h-full object-cover "
         src="/animation2.mp4"
       />
-      <div
-        className="absolute inset-0   opacity-50 z-0"
-        style={{
-          filter: " blur(8px)",
-          background: "#0000008c",
-          color: "#0000008c",
-        }}
-      />
-        <div id="headercontent" className="">
-      {/* <div id="headercontent" className="relative z-10 text-left text-white max-w-4xl px-6 lg:px-8 lg:pl-72 mx-auto"> */}
+      <div id="headercontent" className="">
+        {/* <div id="headercontent" className="relative z-10 text-left text-white max-w-4xl px-6 lg:px-8 lg:pl-72 mx-auto"> */}
         <div
           className="mb-8"
           style={{ textShadow: "0 1px 3px rgba(0, 0, 0, 0.3)" }}
@@ -86,7 +79,10 @@ export function Hero() {
           <h2 className="text-2xl md:text-3xl font-light mb-6 text-slate-300">
             {slides[currentSlide].subtitle}
           </h2>
-          <p id="headerDescription" className="text-lg md:text-xl text-white max-w-2xl mx-auto leading-relaxed">
+          <p
+            id="headerDescription"
+            className="text-lg md:text-xl text-white max-w-2xl mx-auto leading-relaxed"
+          >
             {slides[currentSlide].description}
           </p>
         </div>
@@ -96,21 +92,24 @@ export function Hero() {
         >
           Découvrir nos services
         </Button>
-      
-      </div>  <div id="headerswitch" className="flex justify-center space-x-3 mt-12">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide
-                  ? "bg-orange-600 scale-125"
-                  : "bg-slate-600 hover:bg-slate-500"
-              }`}
-            />
-          ))}
-        </div>
-      <div id="headerIconDown" className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      </div>{" "}
+      <div id="headerswitch" className="flex justify-center space-x-3 mt-12">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentSlide
+                ? "bg-orange-600 scale-125"
+                : "bg-slate-600 hover:bg-slate-500"
+            }`}
+          />
+        ))}
+      </div>
+      <div
+        id="headerIconDown"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
+      >
         <ChevronDown className="w-8 h-8 text-white opacity-60" />
       </div>
     </section>

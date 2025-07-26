@@ -72,7 +72,8 @@ export default function Navbar() {
                   key={href}
                   href={href}
                   className="text-sm text-gray-700 hover:text-blue-600 transition-all duration-200 hover:underline underline-offset-4"
-                >
+               style={{color  : "black" , fontSize : "15px"}}
+               >
                   {label}
                 </Link>
               ) : null

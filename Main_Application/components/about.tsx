@@ -1,9 +1,10 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Users, Award } from "lucide-react";
 import Image from "next/image";
 
-export  function About() {
+export function About() {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-6">
@@ -13,7 +14,7 @@ export  function About() {
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <Image
                 src="/image3.jpg"
-                alt="Technicien Five Systems au travail"
+                alt="Technicien Five Systems au travail à Tanger"
                 width={600}
                 height={400}
                 className="object-cover w-full h-[400px]"
@@ -25,14 +26,12 @@ export  function About() {
             <div className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-xl p-6 border">
               <div className="flex space-x-8">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-orange-600">10+</div>
-                  <div className="text-sm text-slate-600">
-                    Années d'expérience
-                  </div>
+                  <div className="text-3xl font-bold text-orange-600">7+</div>
+                  <div className="text-sm text-slate-600">Ans d'expérience</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-orange-600">50+</div>
-                  <div className="text-sm text-slate-600">Projets réalisés</div>
+                  <div className="text-3xl font-bold text-orange-600">30+</div>
+                  <div className="text-sm text-slate-600">Projets achevés</div>
                 </div>
               </div>
             </div>
@@ -45,15 +44,15 @@ export  function About() {
                 VOTRE ALLIÉ EN INSTALLATIONS TECHNIQUES DE QUALITÉ
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                Depuis plus de 19 ans, Five Systems accompagne ses clients dans
-                la réalisation de leurs projets d'installations techniques.
-                Notre expertise couvre tous les domaines de la sécurité
-                incendie, de la sécurité civile et du chauffage-ventilation.
+                Depuis plus de 7 ans, Five Systems, basée à Tanger, accompagne
+                les entreprises et collectivités marocaines dans la conception,
+                l’installation et la maintenance de leurs systèmes techniques.
               </p>
               <p className="text-lg text-slate-600 leading-relaxed">
-                Nous nous engageons à fournir des solutions innovantes et
-                durables, adaptées aux besoins spécifiques de chaque projet,
-                tout en respectant les normes les plus strictes de l'industrie.
+                Spécialistes en électricité CFO/CFA, climatisation &
+                ventilation, plomberie sanitaire, sécurité incendie et charpente
+                métallique, nous veillons à l’innovation, la durabilité et la
+                conformité à toutes les réglementations en vigueur.
               </p>
             </div>
 
@@ -66,7 +65,7 @@ export  function About() {
                     Qualité certifiée
                   </h3>
                   <p className="text-sm text-slate-600">
-                    Conformité aux normes
+                    Conformité aux normes ISO et NFPA
                   </p>
                 </CardContent>
               </Card>
@@ -78,7 +77,7 @@ export  function About() {
                     Équipe experte
                   </h3>
                   <p className="text-sm text-slate-600">
-                    Techniciens qualifiés
+                    Ingénieurs et techniciens certifiés
                   </p>
                 </CardContent>
               </Card>
@@ -87,19 +86,21 @@ export  function About() {
                 <CardContent className="p-6 text-center">
                   <Award className="w-12 h-12 text-orange-600 mx-auto mb-4" />
                   <h3 className="font-semibold text-slate-900 mb-2">
-                    Excellence
+                    Excellence reconnue
                   </h3>
-                  <p className="text-sm text-slate-600">19+ ans d'expérience</p>
+                  <p className="text-sm text-slate-600">
+                    Plus de 30 projets livrés avec succès
+                  </p>
                 </CardContent>
               </Card>
             </div>
 
-            <Button
-              size="lg"
+            <Link
+              href={"/projects"}
               className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-3 rounded-full"
             >
               En savoir plus
-            </Button>
+            </Link>
           </div>
         </div>
       </div>

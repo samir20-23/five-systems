@@ -1,33 +1,34 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
-import { useRef } from "react";
+import Link from "next/link";
 
 const slides = [
   {
     title: "FIVE SYSTEMS",
-    subtitle: "Excellence en installations techniques",
+    subtitle: "La maîtrise technique au service de votre confort",
     description:
-      "Votre partenaire de confiance pour tous vos projets d'installations techniques de qualité",
+      "Five Systems conçoit, installe et maintient des installations électriques, de climatisation, de plomberie et de sécurité incendie de haute qualité.",
+  },
+  {
+    title: "ÉLECTRICITÉ CFO/CFA",
+    subtitle: "Installations fiables et sécurisées",
+    description:
+      "Conception et réalisation de systèmes électriques haute et basse tension conformes aux normes en vigueur pour garantir performance et sécurité.",
+  },
+  {
+    title: "CLIMATISATION & VENTILATION",
+    subtitle: "Qualité d'air et confort optimal",
+    description:
+      "Solutions performantes de climatisation, ventilation mécanique et traitement d'air pour un environnement sain et agréable.",
   },
   {
     title: "SÉCURITÉ INCENDIE",
-    subtitle: "Protection optimale",
+    subtitle: "Protection et prévention",
     description:
-      "Systèmes de sécurité incendie conformes aux normes les plus strictes",
-  },
-  {
-    title: "CHAUFFAGE VENTILATION",
-    subtitle: "Confort thermique",
-    description:
-      "Solutions de chauffage et ventilation performantes et économiques",
-  },
-  {
-    title: "SÉCURITÉ CIVILE",
-    subtitle: "Surveillance avancée",
-    description: "Systèmes de sécurité civile pour la protection de vos biens",
+      "Mise en place de systèmes de détection, alarmes et désenfumage pour assurer la sécurité de vos locaux et la conformité règlementaire.",
   },
 ];
 
@@ -56,26 +57,19 @@ export function Hero() {
         autoPlay
         muted
         loop
-        className="absolute inset-0 w-full h-full object-cover filter blur-sm w-full h-full object-cover "
+        className="absolute inset-0 w-full h-full object-cover filter blur-sm"
         src="/animation2.mp4"
       />
-      <div id="headercontent" className="">
-        {/* <div id="headercontent" className="relative z-10 text-left text-white max-w-4xl px-6 lg:px-8 lg:pl-72 mx-auto"> */}
+      <div id="headercontent">
         <div
           className="mb-8"
           style={{ textShadow: "0 1px 3px rgba(0, 0, 0, 0.3)" }}
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-tight"></h1>
-          {/* <h1 id="titleheader" className="text-5xl md:text-6xl font-bold mb-4 tracking-tight">
-              {slides[currentSlide].title} */}
-          {/* title  */}
           <p id="titleheader">
             <span className="text-5xl md:text-6xl font-bold mb-4 tracking-tight">
               {slides[currentSlide].title}
             </span>
           </p>
-          {/* title  */}
-
           <h2 className="text-2xl md:text-3xl font-light mb-6 text-slate-300">
             {slides[currentSlide].subtitle}
           </h2>
@@ -86,13 +80,14 @@ export function Hero() {
             {slides[currentSlide].description}
           </p>
         </div>
-        <Button
+
+        <Link 
+          href={"/services"}
           className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105"
-          size="lg"
         >
           Découvrir nos services
-        </Button>
-      </div>{" "}
+        </Link>
+      </div>
       <div id="headerswitch" className="flex justify-center space-x-3 mt-12">
         {slides.map((_, index) => (
           <button

@@ -1,57 +1,87 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Shield, Flame, Wind, Camera, Wrench, Settings, Zap, Droplet, Building } from "lucide-react"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Shield, Flame, Wind, Camera, Wrench, Settings, Zap, Droplet, Building } from "lucide-react";
 
 const services = [
   {
     icon: Zap,
-    title: "Electricité CFO/CFA",
+    title: "Électricité CFO/CFA",
     description:
-      "Nous réalisons des installations électriques fiables pour l’alimentation, l’éclairage et les systèmes de communication. Nos solutions allient performance, sécurité et conformité aux normes.",
-    features: ["Alimentation électrique", "Éclairage intérieur/extérieur", "Réseaux courants faibles", "Mise en conformité électrique"],
+      "Conception et réalisation d’installations électriques haute et basse tension pour bâtiments résidentiels, commerciaux et industriels au Maroc. Sécurisé, performant et conforme aux normes en vigueur.",
+    features: [
+      "Alimentation haute et basse tension",
+      "Éclairage intérieur & extérieur",
+      "Réseaux courants faibles (télécom, sécurité)",
+      "Mise en conformité électrique"
+    ],
     image: "/hover4.png",
   },
   {
     icon: Wind,
-    title: "Climatisation, Ventilation & Traitement d'air",
+    title: "Climatisation & Ventilation",
     description:
-      "Nous proposons des systèmes de climatisation, ventilation et de traitement d’air pour garantir une qualité d’air saine et durable. Nos solutions assurent confort, hygiène et respect des normes.",
-    features: ["Ventilation mécanique", "Climatisation centralisée", "Traitement de l'air", "Qualité de l'air intérieur"],
+      "Installation de systèmes de climatisation centralisée, de ventilation mécanique contrôlée (VMC) et de traitement d’air pour garantir un confort optimal et une qualité d’air saine.",
+    features: [
+      "Climatisation réversible & VRV",
+      "VMC double flux",
+      "Filtres HEPA & UV",
+      "Entretien & maintenance"
+    ],
     image: "/hover2.png",
   },
   {
     icon: Droplet,
-    title: "Plomberie sanitaire",
+    title: "Plomberie Sanitaire",
     description:
-      "Nous concevons et installons des réseaux de plomberie fiables et adaptés, pour l’eau potable et les eaux usées. Nos prestations allient qualité, durabilité et optimisation des consommations.",
-    features: ["Distribution eau potable", "Evacuation eaux usées", "Réseaux sanitaires", "Chauffe-eau / Ballons thermodynamiques"],
+      "Réseaux de plomberie pour eau potable et eaux usées, installation de sanitaires, chauffe-eau et systèmes thermodynamiques, avec optimisation de la consommation d’eau.",
+    features: [
+      "Distribution eau potable",
+      "Évacuation eaux usées",
+      "Installation de sanitaires",
+      "Chauffe-eau thermodynamique"
+    ],
     image: "/hover1.png",
   },
   {
     icon: Flame,
-    title: "Sécurité incendie",
+    title: "Sécurité Incendie",
     description:
-      "Nous mettons en place des systèmes de sécurité incendie complets pour protéger vos espaces. Détection, Désenfumage, alarmes et équipements sont conçus pour une réactivité maximale en cas d’urgence.",
-    features: ["Détection incendie", "Désenfumage", "Extincteurs automatiques", "Signalisation d'évacuation"],
+      "Systèmes complets de détection incendie, alarmes, désenfumage et extincteurs automatiques pour la protection des bâtiments selon la réglementation marocaine et européenne.",
+    features: [
+      "Détection & alarmes",
+      "Désenfumage",
+      "Extincteurs automatiques",
+      "Signalisation d’évacuation"
+    ],
     image: "/hover5.png",
   },
   {
     icon: Building,
-    title: "Charpente métallique",
+    title: "Charpente Métallique",
     description:
-      "Travaux de Charpente Métallique Clé en Main : Conception, Fabrication et Installation",
-    features: ["Études et plans", "Fabrication en atelier", "Montage sur site", "Maintenance structurelle"],
+      "Conception, fabrication et montage de structures métalliques sur mesure — hall industriels, passerelles, supports techniques — avec études techniques et contrôle qualité rigoureux.",
+    features: [
+      "Études & plans 3D",
+      "Fabrication en atelier",
+      "Montage & soudure sur site",
+      "Contrôle non destructif"
+    ],
     image: "/hover3.png",
   },
   {
     icon: Settings,
-    title: "AUTOMATISATION",
+    title: "Automatisation & Domotique",
     description:
-      "Solutions d'automatisation et de domotique pour optimiser la gestion de vos installations et réduire les coûts opérationnels.",
-    features: ["Domotique avancée", "Gestion centralisée", "Optimisation énergétique", "Interface intuitive"],
+      "Solutions de pilotage et supervision (GTB/GTC) pour optimiser l’énergie, la sécurité et le confort : gestion centralisée, programmations sur mesure et interfaces intuitives.",
+    features: [
+      "GTB/GTC centralisée",
+      "Scénarios domotiques",
+      "Optimisation énergétique",
+      "Interface mobile & web"
+    ],
     image: "/hover6.png",
   },
-]
+];
 
 export function Services() {
   return (
@@ -60,8 +90,7 @@ export function Services() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-slate-900 mb-6">NOS SERVICES</h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Découvrez notre gamme complète de services techniques adaptés à tous vos besoins. De la conception à la
-            maintenance, nous vous accompagnons à chaque étape.
+            Five Systems propose une gamme complète de solutions techniques : de l’étude à la maintenance, nous vous accompagnons dans tous vos projets d’installation au Maroc.
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -97,9 +126,10 @@ export function Services() {
                   <p className="text-slate-600 leading-relaxed group-hover:text-white transition-colors duration-300">
                     {service.description}
                   </p>
+                  {/* Uncomment to show features list */}
                   {/* <div className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center space-x-2">
+                    {service.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center space-x-2">
                         <div className="w-2 h-2 bg-orange-500 rounded-full group-hover:bg-orange-300 transition-colors duration-300"></div>
                         <span className="text-sm text-slate-700 group-hover:text-white transition-colors duration-300">
                           {feature}
@@ -114,5 +144,5 @@ export function Services() {
         </div>
       </div>
     </section>
-  )
+  );
 }

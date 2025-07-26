@@ -1,5 +1,5 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, FileText, Wrench, TestTube, Headphones } from "lucide-react"
+import { Card, CardContent } from "@/components/ui/card";
+import { CheckCircle, FileText, Wrench, TestTube, Headphones } from "lucide-react";
 
 const steps = [
   {
@@ -7,37 +7,42 @@ const steps = [
     color: "from-orange-500 to-orange-600",
     icon: FileText,
     title: "Synergie",
-    description: "nous voulons partager avec nos clients des collaborations efficaces, dans un esprit gagnant/gagnant, qui profitera à chacun, et au maintien de l’emploi sur notre commune",
+    description:
+      "Établir des partenariats gagnant‑gagnant avec nos clients, fondés sur la confiance et le partage d’expertises pour créer de la valeur durable.",
   },
   {
     number: "02",
     color: "from-blue-500 to-blue-600",
     icon: CheckCircle,
     title: "Continuité",
-    description: "Nouveaux Projets, Nouvelles Ambitions, mais Savoir-Faire Conservés.",
+    description:
+      "Assurer une transition fluide entre études, réalisation et maintenance, garantissant la pérennité et la performance de vos installations.",
   },
   {
     number: "03",
     color: "from-red-500 to-red-600",
     icon: Wrench,
     title: "Partenariat",
-    description: "Au service des industries, des Cliniques, des Hôtels, des Centre Commerciaux, des Collectivités… Five Systems est, le partenaire incontournable de vos projets",
+    description:
+      "Collaborer avec les industries, cliniques, hôtels, centres commerciaux et collectivités pour devenir votre interlocuteur unique et fiable.",
   },
   {
     number: "04",
     color: "from-green-500 to-green-600",
     icon: TestTube,
     title: "Fiabilité",
-    description: "Pour conquérir ses clients, Five Systems veut être reconnue comme un acteur fiable et sécurisant sur son métier.",
+    description:
+      "Mettre en œuvre des processus rigoureux et des contrôles qualité pour garantir le respect des délais et la robustesse de chaque projet.",
   },
   {
     number: "05",
     color: "from-yellow-500 to-yellow-600",
     icon: Headphones,
     title: "Conformité",
-    description: "Améliorer la qualité et la sureté de nos réalisations dans le strict respect des normes et des législations.",
+    description:
+      "Respecter scrupuleusement les normes locales et internationales (ISO 9001, NFPA) pour offrir des réalisations sûres et certifiées.",
   },
-]
+];
 
 export function Methodology() {
   return (
@@ -46,8 +51,7 @@ export function Methodology() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-slate-900 mb-6">NOTRE MÉTHODE DE TRAVAIL</h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Une approche structurée et éprouvée pour garantir la réussite de chaque projet, de l'analyse initiale à la
-            maintenance continue.
+            Une approche structurée et éprouvée qui couvre chaque étape, de l’analyse initiale à la maintenance continue, pour garantir la réussite de vos projets.
           </p>
         </div>
 
@@ -60,14 +64,16 @@ export function Methodology() {
               <CardContent className="p-6 text-center">
                 {/* Step Number */}
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className={`w-12 h-12 bg-gradient-to-br ${step.color} rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg`}>
+                  <div
+                    className={`w-12 h-12 bg-gradient-to-br ${step.color} rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg`}
+                  >
                     {step.number}
                   </div>
                 </div>
 
                 {/* Icon */}
                 <div className="mt-8 mb-6">
-                  <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto group-hover:bg-orange-100 transition-colors">
+                  <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto group-hover:bg-slate-200 transition-colors">
                     <step.icon className="w-8 h-8 text-slate-600 group-hover:text-orange-600 transition-colors" />
                   </div>
                 </div>
@@ -76,7 +82,7 @@ export function Methodology() {
                 <h3 className="text-lg font-bold text-slate-900 mb-3">{step.title}</h3>
                 <p className="text-slate-600 text-sm leading-relaxed">{step.description}</p>
 
-                {/* Connection Line (except for last item) */}
+                {/* Connection Line */}
                 {index < steps.length - 1 && (
                   <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-orange-300 to-orange-500 transform -translate-y-1/2"></div>
                 )}
@@ -90,16 +96,16 @@ export function Methodology() {
           <div className="inline-flex items-center space-x-4 bg-slate-100 rounded-full px-8 py-4">
             <div className="flex items-center space-x-2">
               <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium text-slate-700">Processus certifié ISO 9001</span>
+              <span className="text-sm font-medium text-slate-700">Processus certifié ISO 9001</span>
             </div>
             <div className="w-px h-6 bg-slate-300"></div>
             <div className="flex items-center space-x-2">
               <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium text-slate-700">Suivi en temps réel</span>
+              <span className="text-sm font-medium text-slate-700">Suivi & support 24/7</span>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

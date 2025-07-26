@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { MapPin, Phone, Mail, Clock } from "lucide-react"
+import { useState } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -16,20 +16,22 @@ export function Contact() {
     phone: "",
     subject: "",
     message: "",
-  })
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
-  }
+    e.preventDefault();
+    // TODO: integrer votre logique d'envoi de formulaire (API, service mail, etc.)
+    console.log("Form submitted:", formData);
+  };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
-    }))
-  }
+    }));
+  };
 
   return (
     <section className="py-20 bg-slate-900 text-white">
@@ -37,8 +39,8 @@ export function Contact() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6">CONTACTEZ-NOUS</h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Prêt à démarrer votre projet ? Notre équipe d'experts est à votre disposition pour vous accompagner et
-            répondre à toutes vos questions.
+            Prêt à démarrer votre projet ? Notre équipe est à votre écoute pour
+            répondre à vos besoins et établir un devis personnalisé.
           </p>
         </div>
 
@@ -55,9 +57,8 @@ export function Contact() {
                   <div>
                     <h4 className="font-semibold mb-1">Adresse</h4>
                     <p className="text-slate-300">
-                      123 Avenue des Technologies
-                      <br />
-                      75001 Paris, France
+                      Jl. Raya Ubud No. 88<br />
+                      Tanger 90000, Maroc
                     </p>
                   </div>
                 </div>
@@ -68,7 +69,7 @@ export function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Téléphone</h4>
-                    <p className="text-slate-300">+33 1 23 45 67 89</p>
+                    <p className="text-slate-300">+212 661 63 06 64</p>
                   </div>
                 </div>
 
@@ -78,7 +79,9 @@ export function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Email</h4>
-                    <p className="text-slate-300">contact@fivesystems.fr</p>
+                    <p className="text-slate-300">
+                      contact@five-systems.com
+                    </p>
                   </div>
                 </div>
 
@@ -89,23 +92,13 @@ export function Contact() {
                   <div>
                     <h4 className="font-semibold mb-1">Horaires</h4>
                     <p className="text-slate-300">
-                      Lun - Ven: 8h00 - 18h00
-                      <br />
-                      Sam: 9h00 - 12h00
+                      Lun – Ven : 8h00 – 18h00<br />
+                      Sam : 9h00 – 13h00
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-
-            {/* Emergency Contact */}
-            {/* <Card className="bg-red-600 border-none">
-              <CardContent className="p-6">
-                <h4 className="font-bold text-white mb-2">Urgence 24h/7j</h4>
-                <p className="text-red-100 mb-3">Pour toute urgence technique</p>
-                <Button className="bg-white text-red-600 hover:bg-red-50">Appeler maintenant</Button>
-              </CardContent>
-            </Card> */}
           </div>
 
           {/* Contact Form */}
@@ -117,7 +110,10 @@ export function Contact() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium mb-2"
+                    >
                       Nom complet *
                     </label>
                     <Input
@@ -130,7 +126,10 @@ export function Contact() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-medium mb-2"
+                    >
                       Téléphone
                     </label>
                     <Input
@@ -144,7 +143,10 @@ export function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium mb-2"
+                  >
                     Email *
                   </label>
                   <Input
@@ -159,7 +161,10 @@ export function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm font-medium mb-2"
+                  >
                     Sujet
                   </label>
                   <Input
@@ -172,7 +177,10 @@ export function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium mb-2"
+                  >
                     Message *
                   </label>
                   <Textarea
@@ -183,7 +191,7 @@ export function Contact() {
                     required
                     rows={5}
                     className="border-slate-300"
-                    placeholder="Décrivez votre projet ou vos besoins..."
+                    placeholder="Décrivez votre projet ou votre besoin..."
                   />
                 </div>
 
@@ -199,5 +207,5 @@ export function Contact() {
         </div>
       </div>
     </section>
-  )
+  );
 }

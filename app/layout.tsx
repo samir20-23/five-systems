@@ -3,9 +3,12 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.dev",
+  title: "Live-systems",
+  description: "Live-systems",
+  generator: "Live-systems",
+  icons: {
+    icon: "/logo1part2.png",
+  },
 };
 
 export default function RootLayout({
@@ -14,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en"> 
+    <html lang="en">
       <body>
         <Navbar />
         {children}

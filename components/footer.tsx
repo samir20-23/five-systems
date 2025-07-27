@@ -7,6 +7,7 @@ import {
   Mail,
   Phone,
   MapPin,
+  Github,
 } from "lucide-react";
 
 export function Footer() {
@@ -19,11 +20,16 @@ export function Footer() {
             <div>
               <h3 className="text-2xl font-bold mb-4">FIVE SYSTEMS</h3>
               <p className="text-slate-300 leading-relaxed">
-                Votre partenaire de confiance pour tous vos projets d’installations techniques depuis plus de 7 ans.
+                Votre partenaire de confiance pour tous vos projets
+                d’installations techniques depuis plus de 7 ans.
               </p>
             </div>
             <div className="flex space-x-4">
-              <a href="https://www.facebook.com/fivesystems" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.facebook.com/fivesystems"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   size="sm"
                   variant="outline"
@@ -32,7 +38,11 @@ export function Footer() {
                   <Facebook className="w-4 h-4" />
                 </Button>
               </a>
-              <a href="https://twitter.com/fivesystems" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://twitter.com/fivesystems"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   size="sm"
                   variant="outline"
@@ -41,7 +51,11 @@ export function Footer() {
                   <Twitter className="w-4 h-4" />
                 </Button>
               </a>
-              <a href="https://linkedin.com/company/fivesystems" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://linkedin.com/company/fivesystems"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   size="sm"
                   variant="outline"
@@ -50,13 +64,30 @@ export function Footer() {
                   <Linkedin className="w-4 h-4" />
                 </Button>
               </a>
-              <a href="https://instagram.com/fivesystems" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.instagram.com/samir_devgenius/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   size="sm"
                   variant="outline"
                   className="border-slate-600 text-slate-300 hover:bg-orange-600 hover:border-orange-600 bg-transparent"
                 >
                   <Instagram className="w-4 h-4" />
+                </Button>
+              </a>
+              <a
+                href="https://github.com/samir20-23/five-systems"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="border-slate-600 text-slate-300 hover:bg-orange-600 hover:border-orange-600 bg-transparent"
+                >
+                  <Github className="w-4 h-4" />
                 </Button>
               </a>
             </div>
@@ -68,7 +99,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="/services#electricite"
+                  href="/services"
                   className="text-slate-300 hover:text-orange-400 transition-colors"
                 >
                   Électricité CFO/CFA
@@ -131,7 +162,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="/team"
+                  href="/"
                   className="text-slate-300 hover:text-orange-400 transition-colors"
                 >
                   Équipe
@@ -139,7 +170,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="/careers"
+                  href="/"
                   className="text-slate-300 hover:text-orange-400 transition-colors"
                 >
                   Carrières
@@ -162,9 +193,7 @@ export function Footer() {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-orange-500 flex-shrink-0" />
-                <span className="text-slate-300 text-sm">
-                 Tanger, Maroc
-                </span>
+                <span className="text-slate-300 text-sm">Tanger, Maroc</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-orange-500 flex-shrink-0" />
@@ -190,19 +219,19 @@ export function Footer() {
             </p>
             <div className="flex space-x-6 text-sm">
               <a
-                href="/legal"
+                href="/"
                 className="text-slate-400 hover:text-orange-400 transition-colors"
               >
                 Mentions légales
               </a>
               <a
-                href="/privacy"
+                href="/"
                 className="text-slate-400 hover:text-orange-400 transition-colors"
               >
                 Politique de confidentialité
               </a>
               <a
-                href="/terms"
+                href="/"
                 className="text-slate-400 hover:text-orange-400 transition-colors"
               >
                 CGV

@@ -121,6 +121,7 @@ body {
   width: 100%;
   align-items: center;
   top: 76%;
+  max-width: 190px;
 }
 
 #headerIconDown {
@@ -157,6 +158,17 @@ body {
   }
 }
 
+/* hero.css */
+
+@media (max-width: 768px) {
+  #titleheader {
+    font-size: 13px;
+  }
+#teamContent{
+  max-width: 190px;
+}
+}
+
 /* Animate Background Image */
 
 @-webkit-keyframes aitf {
@@ -185,7 +197,7 @@ body {
     }
   }
 
-  #headercontent {  
+  #headercontent {
     align-content: center;
     justify-content: center;
     flex-direction: column;

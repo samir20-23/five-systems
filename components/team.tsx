@@ -43,7 +43,7 @@ export function Team() {
           </p>
         </div>
 
-        <div className="flex justify-center" style={{ maxWidth: "400px" }}>
+        <div className="flex justify-center" id="teamContent" style={{ maxWidth: "350px" }}>
           {teamMembers.map((member, index) => (
             <Card
               key={index}

@@ -19,7 +19,7 @@ const slides = [
       "Conception et réalisation de systèmes électriques haute et basse tension conformes aux normes en vigueur pour garantir performance et sécurité.",
   },
   {
-    title: "CLIMATISATION & VENTILATION",
+    title: "CLIMATISATION VENTILATION",
     subtitle: "Qualité d'air et confort optimal",
     description:
       "Solutions performantes de climatisation, ventilation mécanique et traitement d'air pour un environnement sain et agréable.",

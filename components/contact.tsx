@@ -1,7 +1,6 @@
 "use client";
 
 import type React from "react";
-
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -20,8 +19,16 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: integrer votre logique d'envoi de formulaire (API, service mail, etc.)
-    console.log("Form submitted:", formData);
+
+    const { name, email, phone, subject, message } = formData;
+
+    const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=info@five-systems.com&su=${encodeURIComponent(
+      subject || "Demande de contact via site web"
+    )}&body=${encodeURIComponent(
+      `Nom : ${name}\nEmail : ${email}\nTéléphone : ${phone}\n\nMessage :\n${message}`
+    )}`;
+
+    window.open(gmailURL, "_blank");
   };
 
   const handleChange = (
@@ -56,9 +63,8 @@ export function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Adresse</h4>
-                    <p className="text-slate-300">
-                      Jl. Raya Ubud No. 88<br />
-                      Tanger 90000, Maroc
+                    <p className="text-slate-300"> 
+                      Tanger, Maroc
                     </p>
                   </div>
                 </div>
@@ -80,7 +86,7 @@ export function Contact() {
                   <div>
                     <h4 className="font-semibold mb-1">Email</h4>
                     <p className="text-slate-300">
-                      contact@five-systems.com
+                      Info@five-systems.com
                     </p>
                   </div>
                 </div>
@@ -110,10 +116,7 @@ export function Contact() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-medium mb-2"
-                    >
+                    <label htmlFor="name" className="block text-sm font-medium mb-2">
                       Nom complet *
                     </label>
                     <Input
@@ -126,10 +129,7 @@ export function Contact() {
                     />
                   </div>
                   <div>
-                    <label
-                      htmlFor="phone"
-                      className="block text-sm font-medium mb-2"
-                    >
+                    <label htmlFor="phone" className="block text-sm font-medium mb-2">
                       Téléphone
                     </label>
                     <Input
@@ -143,10 +143,7 @@ export function Contact() {
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium mb-2"
-                  >
+                  <label htmlFor="email" className="block text-sm font-medium mb-2">
                     Email *
                   </label>
                   <Input
@@ -161,10 +158,7 @@ export function Contact() {
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="subject"
-                    className="block text-sm font-medium mb-2"
-                  >
+                  <label htmlFor="subject" className="block text-sm font-medium mb-2">
                     Sujet
                   </label>
                   <Input
@@ -177,10 +171,7 @@ export function Contact() {
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium mb-2"
-                  >
+                  <label htmlFor="message" className="block text-sm font-medium mb-2">
                     Message *
                   </label>
                   <Textarea

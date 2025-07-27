@@ -10,7 +10,7 @@ const teamMembers = [
     image:
       "https://img.freepik.com/premium-psd/rand-profile-icon_851129-51.jpg",
     description:
-      "Ingénieur d’État en génie électrique avec plus de 10 ans d’expérience dans la conception et la gestion de projets techniques multisectoriels au Maroc.",
+      "Ingénieur d’État en génie électrique avec .",
     email: "zakaria.riadi@five-systems.com",
     phone: "+212 661 63 60 64",
   },

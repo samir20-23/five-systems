@@ -57,8 +57,7 @@ export default function Navbar() {
                 className="rounded-md"
                 priority
               />
-            </Link>
-            ;
+            </Link> 
           </div>
 
           {/* Desktop Nav */}

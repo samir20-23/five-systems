@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Logo from "../public/logo1.png";
 import { ExternalLink, Calendar, MapPin, X } from "lucide-react";
 import Image from "next/image";
 
@@ -55,7 +56,7 @@ const projects = [
   {
     title: "Clinique Privée El Youssoufia",
     category: "Chauffage Ventilation",
-    location: "Fès, Maroc",
+    location: "Tanger, Maroc",
     date: "2022",
     image: "/image6.jpg",
     description:
@@ -113,10 +114,15 @@ export function Projects() {
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute top-4 right-4">
-                  <span className="bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                    {project.category}
-                  </span>
+                <div className="absolute top-4 right-4"> 
+                    <Image
+                      className=" rounded-md"
+                      src="/logo1Png.png"
+                      alt="Logo"
+                      width={25}
+                      height={25}  
+                      priority
+                    /> 
                 </div>
                 <Button
                   size="sm"

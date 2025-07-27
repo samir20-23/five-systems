@@ -163,7 +163,7 @@ export function Footer() {
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-orange-500 flex-shrink-0" />
                 <span className="text-slate-300 text-sm">
-                  Jl. Raya Ubud No. 88, Tanger 90000, Maroc
+                 Tanger, Maroc
                 </span>
               </div>
               <div className="flex items-center space-x-3">
@@ -175,7 +175,7 @@ export function Footer() {
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-orange-500 flex-shrink-0" />
                 <span className="text-slate-300 text-sm">
-                  contact@five-systems.com
+                  info@five-systems.com
                 </span>
               </div>
             </div>
